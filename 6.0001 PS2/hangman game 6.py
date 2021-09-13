@@ -168,8 +168,14 @@ def hangman(secret_word):
                 else:
                     if guessed_letter in ["a", "e", "i", "o", "u"]:
                         guesses_remaining -= 2
+                        if guesses_remaining <= 0:
+                            lose_game(secret_word)
+                            break
                     else:
                         guesses_remaining -= 1
+                        if guesses_remaining <= 0:
+                            lose_game(secret_word)
+                            break
 
             else:  # if letter already guessed
                 warnings_remaining -= 1
