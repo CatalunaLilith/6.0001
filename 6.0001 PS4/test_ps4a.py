@@ -6,16 +6,17 @@ Created on Fri Oct 15 19:12:41 2021
 """
 
 import unittest
-import ps4a.py
+import ps4a
 
 
 class Testps4a(unittest.TestCase):
 
-    def test_get_permutations():
-        pass
-        # sequence len=0
+    def test_get_permutations(self):
+        self.assertEqual(ps4a.get_permutations(""), [])
+        self.assertEqual(ps4a.get_permutations("a"), ["a"])
+        self.assertEqual(ps4a.get_permutations("123").sort(),
+                         ['123', '213', '231', '132', '312', '321'].sort())
         # sequen len=1
-        # sequence len=3
         # numbers
         # letters
         # space

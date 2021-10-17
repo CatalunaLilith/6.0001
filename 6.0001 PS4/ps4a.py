@@ -5,7 +5,7 @@
 
 def get_permutations(sequence):
     """
-    assumes sequence is a non-empty string
+    assumes sequence is a string
     returns a list of strings, representing all the permutations of sequence
     note: do not depend on the order of permutations
     e.g >>> get_permutations('abc')
@@ -14,6 +14,12 @@ def get_permutations(sequence):
     # initialize holding variables
     permutations_of_sequence = []
     permutations_of_cutdown_sequence = []
+
+    # base cases
+    if len(sequence) == 0:
+        return []
+    if len(sequence) == 1:
+        return [sequence]
 
     # define recursive behaviour
     # for sequence of len(n), case is sequence[0] and sequence[1:n]
@@ -44,7 +50,8 @@ def get_permutations(sequence):
     return list(dict.fromkeys(permutations_of_sequence))
 
 
-print(get_permutations("cat"))
+# print(get_permutations("cat"))
+print(get_permutations("a"))
 
 if __name__ == '__main__':
     example_input = 'abc'
