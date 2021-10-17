@@ -50,9 +50,6 @@ def get_permutations(sequence):
     return list(dict.fromkeys(permutations_of_sequence))
 
 
-# print(get_permutations("cat"))
-print(get_permutations("a"))
-
 if __name__ == '__main__':
     example_input = 'abc'
     print('Input:', example_input)
