@@ -137,6 +137,13 @@ class Testps4a(unittest.TestCase):
                                                              "~]'{*",
                                                              "~]{'*",
                                                              "~]{*'"])
+        # TODO test tuples
+        tuples = (1, 2), ("a", "b")
+        # self.assertEqual(ps4a.get_permutations(tuples))
+        result = (ps4a.get_permutations(tuples))
+        print(result)
+
+        # TODO test custom objects
 
 
 if __name__ == "__main__":
